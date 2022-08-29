@@ -1,0 +1,95 @@
+version: "3.1"
+
+intents:
+  - greet
+  - greet_back
+  - location
+  - alumini_confirmation_affirm
+  - alumini_confirmation_deny
+  - name
+  - whatsapp
+  - collage_id
+
+entities:
+  - location_name
+  - my_name
+  - mobile
+  - collage_id
+
+slots:
+  location_name:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: location_name
+
+  my_name:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: my_name
+
+  mobile:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: mobile
+
+  collage_id:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: collage_id
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you? happy to see you after long time "
+
+  utter_ask_location_name:
+    - text: "where are you now? "
+
+  utter_ask_location_greet:
+    - text: "That's great, I want to ask you something . Aluminin meet association is arranged in our collage . Are you interested in joining?"
+
+  utter_ask_my_name:
+    - text: "Great! Then you have to provide me few details. whats your name as per the records?"
+
+  utter_alumini_confirmation_deny:
+    - text: "That's okay . no problem carry on"
+
+  utter_ask_mobile:
+    - text: "share me your whatsapp number"
+
+  utter_ask_collage_id:
+    - text: "okay {my_name}. whats the collage id?"
+
+  utter_submit:
+    - text: "Thank you . I will generate the pass and send the same to your number {mobile}"
+
+  utter_thanks:
+    - text: "okay {my_name}. convey my regards to all at home . Bye"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_submit
+
+forms:
+  alumini_info_form:
+    required_slots:
+      - location_name
+      - my_name
+      - mobile
+      - collage_id
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

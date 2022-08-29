@@ -1,0 +1,74 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good afternoon
+    - good evening
+
+- intent: greet_back
+  examples: |
+    - am fine 
+    - am fine thank you
+
+- intent: location
+  examples: |
+    - am living in [canada]{"entity": "location_name"} right now
+    - [germany]{"entity": "location_name"}
+    - [usa]{"entity": "location_name"}
+    - am in [India]{"entity": "location_name"} only
+
+- intent: alumini_confirmation_affirm
+  examples: |
+    - yes am interested
+    - yes am interested .what is the procedure?
+    - yes ofcourse
+
+- intent: name 
+  examples: |
+    - as per records my name is [harshu]{"entity": "my_name"}
+    - my full name is [shalu]{"entity": "my_name"}
+    - [vidya]{"entity": "my_name"}
+    - [priya]{"entity": "my_name"}
+
+
+- intent: alumini_confirmation_deny
+  examples: |
+    - no da
+    - No am not interested
+    - No i cannot join 
+    - No way . I can't 
+
+- intent: whatsapp
+  examples: |
+    - this is my whatsapp number [1234567890]{"entity": "mobile"}
+    - this is my number [0987654321]{"entity": "mobile"}
+    - [4321876509]{"entity": "mobile"}
+    - [6789012345]{"entity": "mobile"}
+
+- intent: collage_id
+  examples: |
+    - [10lbece043]{"entity": "collage_id"}
+    - [10lbeece324]{"entity": "collage_id"}
+    - my roll number is [10lbeece678]{"entity": "collage_id"}
+    - [10lbeece986]{"entity": "collage_id"}
+
+- intent: submit
+  examples: |
+    - okay 
+    - ok done
+    - ya okay
+
+
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

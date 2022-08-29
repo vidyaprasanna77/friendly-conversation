@@ -1,0 +1,82 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+  # - story: alumini information path 1
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - intent: greet_back
+  #   - action: utter_ask_location_name
+  #   - intent: location
+  #     entities:
+  #     - location_name: "London"
+  #   - slot_was_set:
+  #     - location_name: "Canada"
+  #   - action: utter_ask_location_greet
+  #   - intent: alumini_confirmation_affirm
+  #   - action: utter_ask_my_name
+  #   - intent: name 
+  #     entities: 
+  #     - my_name: "vino"
+  #   - slot_was_set:
+  #     - my_name: "vidya"
+  #   - action: utter_ask_mobile
+  #   - intent: whatsapp
+  #     entities:
+  #     - mobile: "1234567890"
+  #   - slot_was_set: 
+  #     - mobile: "8980764532"
+  #   - action: utter_ask_collage_id
+  #   - intent: collage_id
+  #     entities:
+  #     - collage_id: "10lbeece678"
+  #   - slot_was_set:
+  #     - collage_id: "10lbeece143"
+  #   - action: utter_submit
+  #   - intent: submit
+  #   - action: utter_thanks
+
+
+  # - story: alumini information path 2
+  #   steps:
+  #   - intent: greet
+  #   - action: utter_greet
+  #   - intent: greet_back
+  #   - action: utter_ask_location_name
+  #   - intent: location
+  #     entities:
+  #     - location_name: "London"
+  #   - slot_was_set:
+  #     - location_name: "Canada"
+  #   - action: utter_ask_location_greet
+  #   - intent: alumini_confirmation_deny
+  #   - action: utter_alumini_confirmation_deny
+    
